@@ -1,0 +1,73 @@
+/* General */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.clear {
+    clear: both;
+}
+
+/* ------------------------------------------------------------------- */
+/* nav bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: white;
+    padding-left: 30px;
+}
+
+.container .logo h1 {
+    color: rgb(33, 37, 41);
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.container .logo span {
+    color: red;
+}
+
+.dark-mode-icon {
+    display: none;
+    font-weight: 900;
+    line-height: 25px;
+    font-size: 25px;
+    color: rgb(33, 37, 41);
+}
+
+.container .menu {
+    color: lightgray;
+}
+
+.container .menu ul {
+    padding: 0;
+}
+
+.container .menu li {
+    list-style-type: none;
+    padding: 8px 0px;
+}
+
+.container .menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: gray;
+    font-size: 17px;
+    text-transform: capitalize;
+    transition: .2s;
+}
+
+.container .menu a:hover {
+    color: black;
+}
