@@ -68,7 +68,7 @@
 
     /* -------------------------------------------------------- */
     /* intro */
-    .intro{
+    .intro {
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
@@ -92,16 +92,17 @@
 
     /* -------------------------------------------------------- */
     /* chefs */
-    .chefs{
+    .chefs {
         margin: 90px 0px;
         padding: 20px 90px;
     }
+
     .chefs-cards {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .card {
         width: 33.333%;
     }

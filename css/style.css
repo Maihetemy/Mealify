@@ -256,9 +256,40 @@ picture:hover {
 }
 
 .card-container {
+    position: relative;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
-}
+    transition: transform .5s;
+    overflow: hidden;
 
+}
+.card-container:hover .card-social{
+    left: 85%;
+}
+.card-social{
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    align-items: center;
+    border-radius: 5px;
+    transition: left .5s;
+
+}
+.card-social ul{
+    margin: 0;
+    padding: 7px 10px;
+}
+.card-social li{
+    list-style:none;
+    margin: 10px 5px;
+}
+.card-social a{
+    color: gray;
+
+}
+.card-container:hover{
+    transform: scale(1.1);
+}
 .card-image {
     width: 100%;
 }
