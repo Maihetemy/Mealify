@@ -6,9 +6,11 @@
 *::before {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
+
 body {
     font-family: "Open Sans", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
@@ -126,7 +128,7 @@ nav {
 
 }
 
-.intro .content button:hover{
+.intro .content button:hover {
     background-color: rgb(209, 48, 48);
 }
 
@@ -257,6 +259,7 @@ picture:hover {
 }
 
 .card {
+    width: 100%;
     padding: 20px;
     text-align: center;
 }
@@ -268,10 +271,12 @@ picture:hover {
     overflow: hidden;
 
 }
-.card-container:hover .card-social{
+
+.card-container:hover .card-social {
     left: 85%;
 }
-.card-social{
+
+.card-social {
     position: absolute;
     top: 10%;
     left: 100%;
@@ -281,24 +286,30 @@ picture:hover {
     transition: left .5s;
 
 }
-.card-social ul{
+
+.card-social ul {
     margin: 0;
     padding: 7px 10px;
 }
-.card-social li{
-    list-style:none;
+
+.card-social li {
+    list-style: none;
     margin: 10px 5px;
 }
-.card-social a{
+
+.card-social a {
     color: gray;
 
 }
-.card-social a:hover{
+
+.card-social a:hover {
     color: black;
 }
-.card-container:hover{
+
+.card-container:hover {
     transform: scale(1.1);
 }
+
 .card-image {
     width: 100%;
 }
@@ -307,9 +318,12 @@ picture:hover {
     width: 100%;
     display: block;
 }
-.card-container, .card-image img{
+
+.card-container,
+.card-image img {
     border-radius: 10px;
 }
+
 .card-content {
     padding: 10px;
 }
@@ -328,7 +342,60 @@ p {
         rgb(127, 127, 144);
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.card-content p{
-font-size: 15px;
-font-style: italic;
+
+.card-content p {
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* ---------------------------------------------------------------------- */
+/* contact us */
+.contact{
+    margin: 50px 0px;
+    padding: 40px 15px;
+}
+.contact-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 20px 0px;
+}
+
+.contact-container {
+    width: 100%;
+    display: flex;
+   align-items: center;
+    margin: 10px 0px;
+    background-color: #F5F5F5;
+    padding: 20px;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon i {
+    background-color: #CE1212;
+    border-radius: 100%;
+    padding: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+.details h3 {
+    color:
+        rgb(125, 125, 125);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.details p {
+    color: rgb(33, 37, 41);
+    font-size: 16px;
+    margin: 0;
+    margin: 5px;
+
 }

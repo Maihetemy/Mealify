@@ -99,18 +99,26 @@
 
     .chefs-cards {
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .card {
-        width: 33.333%;
+        width: 50%;
     }
 
 }
 
 /* md */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+
+    /* -------------------------------------------------------- */
+    /* chefs */
+    .card {
+        width: 33.3333%;
+    }
+}
 
 /* lg */
 @media (min-width: 1280px) {}
