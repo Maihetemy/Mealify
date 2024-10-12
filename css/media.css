@@ -68,7 +68,7 @@
 
     /* -------------------------------------------------------- */
     /* intro */
-    .intro {
+    .intro{
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
@@ -76,17 +76,34 @@
         padding: 20px 90px;
     }
 
+    picture {
+        width: 40%;
+    }
+
     .intro .content {
         width: 40%;
         justify-content: flex-start;
         text-align: left;
     }
-    .intro .content .book-button{
-        border-radius: 0px 50px 50px 50px ;
+
+    .intro .content .book-button {
+        border-radius: 0px 50px 50px 50px;
     }
 
-    .main-dish {
-        width: 40%;
+    /* -------------------------------------------------------- */
+    /* chefs */
+    .chefs{
+        margin: 90px 0px;
+        padding: 20px 90px;
+    }
+    .chefs-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card {
+        width: 33.333%;
     }
 
 }
