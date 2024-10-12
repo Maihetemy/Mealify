@@ -6,7 +6,9 @@
 *::before {
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 body {
     font-family: "Open Sans", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
@@ -120,8 +122,12 @@ nav {
     align-items: center;
     border-radius: 50px;
     padding: 16px 20px;
+    transition: background-color .5s;
 
+}
 
+.intro .content button:hover{
+    background-color: rgb(209, 48, 48);
 }
 
 .intro .content button i {
@@ -286,6 +292,9 @@ picture:hover {
 .card-social a{
     color: gray;
 
+}
+.card-social a:hover{
+    color: black;
 }
 .card-container:hover{
     transform: scale(1.1);
