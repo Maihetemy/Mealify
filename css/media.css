@@ -94,18 +94,33 @@
     /* chefs */
     .chefs {
         margin: 90px 0px;
-        padding: 20px 90px;
     }
 
     .chefs-cards {
         display: flex;
-        /* justify-content: center; */
         align-items: center;
         flex-wrap: wrap;
     }
 
     .card {
         width: 50%;
+    }
+
+    /* -------------------------------------------------------- */
+    /* contact */
+    .contact-items {
+        margin: 20px 0px;
+    }
+
+
+
+    .layer {
+        width: 50%;
+        padding: 5px;
+    }
+
+    .contact-container {
+        height: 100%;
     }
 
 }
@@ -118,6 +133,12 @@
     .card {
         width: 33.3333%;
     }
+    /* -------------------------------------------------------- */
+    /* contact */
+
+
+
+
 }
 
 /* lg */

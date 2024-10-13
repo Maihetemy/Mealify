@@ -350,22 +350,24 @@ p {
 
 /* ---------------------------------------------------------------------- */
 /* contact us */
-.contact{
-    margin: 50px 0px;
-    padding: 40px 15px;
+.contact {
+    margin: 50px 25px;
 }
+
 .contact-items {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
     margin: 20px 0px;
 }
 
-.contact-container {
+.layer {
     width: 100%;
+    padding: 10px 0px;
+}
+
+.contact-container {
     display: flex;
-   align-items: center;
-    margin: 10px 0px;
+    align-items: center;
     background-color: #F5F5F5;
     padding: 20px;
 }
@@ -384,6 +386,7 @@ p {
     margin-right: 10px;
 }
 
+
 .details h3 {
     color:
         rgb(125, 125, 125);
@@ -395,7 +398,11 @@ p {
 .details p {
     color: rgb(33, 37, 41);
     font-size: 16px;
+    font-weight: 400;
     margin: 0;
     margin: 5px;
 
+}
+.details span{
+    font-weight: 700;
 }
