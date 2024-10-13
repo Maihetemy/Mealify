@@ -115,7 +115,7 @@ nav {
     gap: 2.5rem;
 }
 
-.intro .content button {
+button {
     border: 0px;
     color: white;
     background-color: rgb(206, 18, 18);
@@ -128,11 +128,11 @@ nav {
 
 }
 
-.intro .content button:hover {
+button:hover {
     background-color: rgb(209, 48, 48);
 }
 
-.intro .content button i {
+button i {
     margin-right: 8px;
 }
 
@@ -403,6 +403,37 @@ p {
     margin: 5px;
 
 }
-.details span{
+
+.details span {
     font-weight: 700;
+}
+
+form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+
+}
+
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    text-transform: capitalize;
+    border: none;
+    border: solid 1px #ccc;
+    margin: 15px 0px;
+    padding: 15px;
+    outline: none;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    border: solid 2px #CE1212;
+
 }

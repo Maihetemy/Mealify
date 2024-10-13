@@ -112,8 +112,6 @@
         margin: 20px 0px;
     }
 
-
-
     .layer {
         width: 50%;
         padding: 5px;
@@ -133,12 +131,13 @@
     .card {
         width: 33.3333%;
     }
+
     /* -------------------------------------------------------- */
     /* contact */
-
-
-
-
+    #name-input,
+    #email-input {
+        width: 50%;
+    }
 }
 
 /* lg */
