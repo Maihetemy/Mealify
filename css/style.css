@@ -6,10 +6,12 @@
 *::before {
     box-sizing: border-box;
 }
-::selection{
+
+::selection {
     background-color: #D85454;
     color: white;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -443,21 +445,60 @@ textarea:focus {
 
 /* -------------------------------------------------------- */
 /* gallery */
-.gallery{
+.gallery {
     background-color: #EEEEEE;
     padding: 50px;
 }
-.gallery-container{
+
+.gallery-container {
     column-count: 3;
     margin: 50px;
     gap: 15px;
 }
-.gallery-container .image{
-    border: white 3px solid;
+
+.gallery-container .image {
+    border: white 4px solid;
     margin-bottom: 15px;
-    background-color: teal;
+    position: relative;
+    overflow: hidden;
 }
-.gallery-container img{
+
+.gallery-container .black-layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+}
+
+.gallery-container .black-layer h3 {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+
+
+}
+
+.gallery-container .black-layer p,
+.gallery-container .black-layer h3 {
+    color: white;
+}
+
+.gallery-container .image .black-layer {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    transition: top .5s;
+}
+
+.gallery-container .image:hover .black-layer{
+    top: 0%;
+}
+.gallery-container img {
     width: 100%;
     display: block;
 }
