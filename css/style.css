@@ -6,7 +6,10 @@
 *::before {
     box-sizing: border-box;
 }
-
+::selection{
+    background-color: #D85454;
+    color: white;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -436,4 +439,25 @@ input[type=email]:focus,
 textarea:focus {
     border: solid 2px #CE1212;
 
+}
+
+/* -------------------------------------------------------- */
+/* gallery */
+.gallery{
+    background-color: #EEEEEE;
+    padding: 50px;
+}
+.gallery-container{
+    column-count: 3;
+    margin: 50px;
+    gap: 15px;
+}
+.gallery-container .image{
+    border: white 3px solid;
+    margin-bottom: 15px;
+    background-color: teal;
+}
+.gallery-container img{
+    width: 100%;
+    display: block;
 }
