@@ -46,8 +46,8 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(0,0,0);
-background: radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(43,43,49,1) 81%);
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 25%, rgba(43, 43, 49, 1) 81%);
     border-radius: 20px;
     height: 50px;
 
@@ -57,14 +57,27 @@ background: radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(43,43,49,1) 81%);
 /* nav bar */
 nav {
     background-color: white;
-    padding-left: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
 
 }
 
 .logo h1 {
     color: rgb(33, 37, 41);
     font-weight: 700;
-    font-size: 30px;
+    font-size: 22px;
+    margin: 0;
 }
 
 .logo span {
@@ -85,17 +98,21 @@ nav {
 
 .container .menu ul {
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 .container .menu li {
-    padding: 8px 0px;
+    padding: 8px;
 }
 
 .container .menu a {
     text-decoration: none;
     font-weight: 600;
     color: gray;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: capitalize;
     transition: .2s;
 }
@@ -103,18 +120,45 @@ nav {
 .container .menu a:hover {
     color: black;
 }
+.dark-mode-icon {
+    display: inline-block;
+}
+
+.under-line {
+    position: relative;
+    padding: 6px 0px;
+}
+
+.under-line::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: rgb(206, 18, 18);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width .5s;
+}
+
+.under-line:hover::before {
+    width: 100%;
+}
+
+.container .dark-mode-icon {
+    visibility: visible;
+}
 
 /* ------------------------------------------------------------------- */
 /* intro section */
 
 .intro {
-    /* height: 100vh; */
     background-color: rgb(238, 238, 238);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap-reverse;
     padding: 50px 0px;
+    margin: 20px 0px;
 }
 
 
@@ -260,7 +304,7 @@ picture:hover {
     align-items: center;
     flex-wrap: wrap;
     margin: 50px 0px;
-    padding: 30px 0px;
+    padding: 30px 15px;
 
 }
 
@@ -292,13 +336,13 @@ picture:hover {
 
 .card {
     width: 100%;
-    padding: 20px;
     text-align: center;
+    margin: 30px 0px;
 }
 
 .card-container {
     position: relative;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 16px 0 rgba(128, 128, 128, .2);
     transition: transform .5s;
     overflow: hidden;
 
@@ -338,7 +382,7 @@ picture:hover {
 }
 
 .card-container:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .card-image {
@@ -379,10 +423,70 @@ p {
     font-style: italic;
 }
 
+/* -------------------------------------------------------- */
+/* gallery */
+
+.gallery {
+    background-color: #EEEEEE;
+    padding: 40px 15px;
+    margin: 50px 0px;
+}
+
+
+
+.gallery-container .image {
+    border: white 4px solid;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-container .black-layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+}
+
+.gallery-container .black-layer h3 {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+
+
+}
+
+.gallery-container .black-layer p,
+.gallery-container .black-layer h3 {
+    color: white;
+}
+
+.gallery-container .image .black-layer {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    transition: top .5s;
+}
+
+.gallery-container .image:hover .black-layer {
+    top: 0%;
+}
+
+.gallery-container img {
+    width: 100%;
+    display: block;
+}
+
 /* ---------------------------------------------------------------------- */
 /* contact us */
 .contact {
-    margin: 50px 25px;
+    margin: 50px 0px;
+    padding: 40px 15px;
 }
 
 .contact-items {
@@ -444,7 +548,8 @@ form {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    gap: 15px;
+    padding: 20px;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 
 }
@@ -455,11 +560,9 @@ input[type=email],
 textarea {
     width: 100%;
     text-transform: capitalize;
-    border: none;
-    border: solid 1px #ccc;
-    margin: 15px 0px;
-    padding: 15px;
     outline: none;
+    border: solid 2px #ccc;
+    padding: 15px;
 }
 
 input[type=text]:focus,
@@ -469,65 +572,31 @@ textarea:focus {
 
 }
 
-/* -------------------------------------------------------- */
-/* gallery */
-.gallery {
-    background-color: #EEEEEE;
-    padding: 20px;
+textarea {
+    resize: vertical;
 }
 
-
-
-.gallery-container .image {
-    border: white 4px solid;
-    margin-bottom: 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-.gallery-container .black-layer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    gap: 0;
-    padding: 20px;
-}
-
-.gallery-container .black-layer h3 {
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 700;
-
-
-}
-
-.gallery-container .black-layer p,
-.gallery-container .black-layer h3 {
-    color: white;
-}
-
-.gallery-container .image .black-layer {
-    background-color: rgba(0, 0, 0, .5);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    transition: top .5s;
-}
-
-.gallery-container .image:hover .black-layer {
-    top: 0%;
-}
-
-.gallery-container img {
-    width: 100%;
-    display: block;
-}
+/* ------------------------------------------ */
+/* footer */
 
 footer {
     background-color: #000000;
+    background-image: url(/images/textured-metal-background.jpg);
+    background-size: contain;
+    padding: 40px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+footer::before {
+    content: '';
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 footer .about .logo-section {
@@ -568,6 +637,8 @@ footer .Social-media h3 {
     font-weight: 700;
     text-transform: capitalize;
     border-bottom: gray 2px solid;
+    margin: 10px 0px;
+
 }
 
 footer .Social-media ul {
@@ -594,11 +665,22 @@ footer .subscription {
     text-transform: capitalize;
 }
 
+.subscription p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.subscription form {
+    margin: 0;
+    padding: 0;
+}
+
 .subscription button {
     width: 100%;
     border-radius: 0;
     font-size: 15px;
     font-weight: 400;
+
 }
 
 .subscription ul {
