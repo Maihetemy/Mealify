@@ -121,6 +121,18 @@
         height: 100%;
     }
 
+    /* gallery */
+
+    .gallery-container {
+        column-count: 2;
+        margin: 50px;
+        gap: 15px;
+        }
+        .gallery {
+            padding: 50px;
+        }
+
+
 }
 
 /* md */
@@ -134,11 +146,26 @@
 
     /* -------------------------------------------------------- */
     /* contact */
+
     #name-input,
     #email-input {
         width: 50%;
     }
+
+    /* -------------------------------------------------------- */
+    /* gallery */
+
+    .gallery-container {
+    column-count: 3;
+    margin: 50px;
+    gap: 15px;
+    }
+    .gallery {
+        padding: 50px;
+    }
+    
 }
+
 
 /* lg */
 @media (min-width: 1280px) {}

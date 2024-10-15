@@ -25,22 +25,30 @@ body {
     clear: both;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 /* ------------------------------------------------------------------- */
 /* nav bar */
 nav {
     background-color: white;
     padding-left: 30px;
-    /* position: relative;
-    z-index: 9999; */
+
 }
 
-.container .logo h1 {
+.logo h1 {
     color: rgb(33, 37, 41);
     font-weight: 700;
     font-size: 30px;
 }
 
-.container .logo span {
+.logo span {
     color: rgb(206, 18, 18);
 }
 
@@ -61,7 +69,6 @@ nav {
 }
 
 .container .menu li {
-    list-style-type: none;
     padding: 8px 0px;
 }
 
@@ -298,7 +305,6 @@ picture:hover {
 }
 
 .card-social li {
-    list-style: none;
     margin: 10px 5px;
 }
 
@@ -447,14 +453,10 @@ textarea:focus {
 /* gallery */
 .gallery {
     background-color: #EEEEEE;
-    padding: 50px;
+    padding: 20px;
 }
 
-.gallery-container {
-    column-count: 3;
-    margin: 50px;
-    gap: 15px;
-}
+
 
 .gallery-container .image {
     border: white 4px solid;
@@ -495,10 +497,128 @@ textarea:focus {
     transition: top .5s;
 }
 
-.gallery-container .image:hover .black-layer{
+.gallery-container .image:hover .black-layer {
     top: 0%;
 }
+
 .gallery-container img {
     width: 100%;
     display: block;
+}
+
+footer {
+    background-color: #000000;
+}
+
+footer .about .logo-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer .logo-section img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+footer .logo-section .logo h1 {
+    color: white;
+}
+
+footer .about p {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+footer .Social-media {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .Social-media h3 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-bottom: gray 2px solid;
+}
+
+footer .Social-media ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+}
+
+footer .Social-media ul a {
+    color: white;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+footer .Social-media ul a:hover {
+    color: #CE1212;
+}
+
+footer .subscription {
+    color: white;
+    text-transform: capitalize;
+}
+
+.subscription button {
+    width: 100%;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.subscription ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.subscription li {
+    width: 50%;
+    padding: 5px;
+    transition: translate .5s;
+}
+
+.subscription li:hover {
+    background-color: rgba(128, 128, 128, .5);
+    translate: 20px;
+}
+.subscription p{
+    color: white;
+}
+.subscription li::before {
+    content: "\f105";
+    font: var(--fa-font-solid);
+    margin-right: 5px;
+
+}
+
+footer .contact-details ul{
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+footer .contact-details ul i {
+    color: #CE1212;
+    font-size: 25px;
+    margin: 10px;
+}
+.contact-details h3{
+    color: white;
 }
