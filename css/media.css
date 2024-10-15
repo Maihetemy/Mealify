@@ -8,53 +8,72 @@
     /* nav bar */
     .container .logo h1 {
         padding: 0;
-        margin: 0;
+        font-size: 30px;
+        margin-left: 10px;
+        padding: 5px;
     }
 
-    
+    .container .menu a {
+        font-size: 17px;
+        padding: 0px 10px;
+    }
 
     /* -------------------------------------------------------- */
     /* intro */
-    .intro {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        margin: 90px 0px;
-        padding: 20px 90px;
-    }
 
-    picture {
-        width: 40%;
+    .intro {
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        margin: 50px 0px;
+        padding: 50px 40px;
     }
 
     .intro .content {
-        width: 40%;
-        justify-content: flex-start;
-        text-align: left;
+        justify-content: center;
+        text-align: center;
+
     }
 
-    .intro .content .book-button {
-        border-radius: 0px 50px 50px 50px;
+    .intro .content p {
+        color: rgb(79, 79, 90);
+        margin: 20px;
+        line-height: 26px;
+        font-size: 16px;
+        font-weight: 400;
     }
+
+    button {
+        font-size: 16px;
+        padding: 20px 25px;
+    }
+
 
     /* -------------------------------------------------------- */
     /* chefs */
     .chefs {
-        margin: 90px 0px;
+        margin: 50px 0px;
+        padding: 0px 20px;
     }
 
     .chefs-cards {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 
     .card {
-        width: 50%;
+        width: 49%;
+        margin: 15px 0px;
+
     }
 
     /* -------------------------------------------------------- */
     /* contact */
+    .contact {
+        padding: 40px 30px;
+    }
+
     .contact-items {
         margin: 20px 0px;
     }
@@ -68,51 +87,112 @@
         height: 100%;
     }
 
+    /* ----------------------------------------- */
     /* gallery */
 
     .gallery-container {
         column-count: 2;
         margin: 50px;
         gap: 15px;
-        }
-        .gallery {
-            padding: 50px;
-        }
+    }
 
+    .gallery {
+        padding: 50px;
+    }
 
+    /* ----------------------------------------- */
+    /* footer */
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* footer .line1 {
+        width: 50%;
+    } */
 }
 
 /* md */
 @media (min-width: 1024px) {
 
+    /* nav */
+    /* -------------------------------------------------------- */
+
+    nav {
+        padding: 0px 80px;
+    }
+
+    /* intro */
+    /* -------------------------------------------------------- */
+    .intro {
+        display: flex;
+        height: 100vh;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin: 60px 0px;
+        padding: 0px 110px;
+        gap: 200px;
+    }
+
+    .intro .content {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .intro .content .book-button {
+        border-radius: 0px 50px 50px 50px;
+    }
+
     /* -------------------------------------------------------- */
     /* chefs */
+
     .card {
-        width: 33.3333%;
+        width: 33%;
+        padding: 15px;
     }
 
     /* -------------------------------------------------------- */
     /* contact */
+    .contact {
+        margin: 50px 110px;
+        padding: 40px 5px;
+    }
 
-    #name-input,
-    #email-input {
-        width: 50%;
+    .form-section form div {
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        flex-wrap: nowrap;
     }
 
     /* -------------------------------------------------------- */
     /* gallery */
 
     .gallery-container {
-    column-count: 3;
-    margin: 50px;
-    gap: 15px;
+        /* column-count: 3; */
+        margin: 50px;
+        gap: 15px;
     }
+
     .gallery {
         padding: 50px;
     }
-    
-}
 
+    /* -------------------------------------------------------- */
+    /* footer */
+
+    footer {
+        flex-wrap: nowrap;
+    }
+
+    /* footer .line1, */
+    footer .contact-details,
+    footer .subscription {
+        width: 33.333%;
+    }
+}
 
 /* lg */
 @media (min-width: 1280px) {}
