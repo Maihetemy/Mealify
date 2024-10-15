@@ -339,7 +339,9 @@ picture:hover {
     width: 100%;
     text-align: center;
     margin: 30px 0px;
+    /* background-color: tomato; */
 }
+
 
 .card-container {
     position: relative;
@@ -388,6 +390,22 @@ picture:hover {
 
 .card-image {
     width: 100%;
+    position: relative;
+    /* z-index: -1; */
+}
+
+.card .card-image::before{
+    content: '';
+    /* background-color: white; */
+    background-image: url(/images/team-shape.svg);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    min-height: 50px;
+    
+
 }
 
 .card-image img {
