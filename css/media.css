@@ -106,8 +106,45 @@
     footer {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        column-count: 2;
+        padding: 30px 50px;
+        
     }
+
+    .subscription form{
+        flex-wrap: nowrap;
+    }
+
+    .subscription input {
+        width: 80%;
+        margin: 0;
+    }
+    
+    .subscription button {
+        width: 20%;
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .about,
+    .contact-details {
+        /* flex-direction: column; */
+        width: 50%;
+        padding: 0px 10px;
+    }
+
+    .about {
+        order: 1;
+    }
+
+    .quick-subscription {
+        order: 3;
+    }
+
+    .contact-details {
+        order: 2;
+    }
+
 
     /* footer .line1 {
         width: 50%;
@@ -184,13 +221,31 @@
     /* footer */
 
     footer {
-        flex-wrap: nowrap;
+        justify-content: baseline;
+        justify-content: baseline;
+    }
+    .about, .contact-details, .quick-links{
+        padding: 0px 30px;
+    }
+    .quick-subscription {
+        width: 50%;
     }
 
-    /* footer .line1, */
-    footer .contact-details,
-    footer .subscription {
-        width: 33.333%;
+    .about,
+    .contact-details {
+        width: 25%;
+    }
+
+    .about {
+        order: 1;
+    }
+
+    .quick-subscription {
+        order: 2;
+    }
+
+    .contact-details {
+        order: 3;
     }
 }
 
