@@ -399,7 +399,7 @@ picture:hover {
 
 .card-image::before {
     content: '';
-    background-image: url(/images/team-shape.svg);
+    background-image: url(images/team-shape.svg);
     position: absolute;
     left: 0;
     width: 100%;
@@ -601,7 +601,7 @@ textarea {
 
 footer {
     background-color: #000000;
-    background-image: url(/images/textured-metal-background.jpg);
+    background-image: url(images/textured-metal-background.jpg);
     background-size: contain;
     padding: 40px 15px;
     position: relative;
