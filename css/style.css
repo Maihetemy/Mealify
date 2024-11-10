@@ -1,5 +1,4 @@
 /* General */
-/* mobile first */
 
 *,
 *::after,
@@ -7,8 +6,51 @@
     box-sizing: border-box;
 }
 
+
+:root{
+    --main-color: rgb(206, 18, 18);
+    --secondary-site-color: white;
+    --main-typing-color : #171717;
+    --gray: gray;
+    --selector-color: #D85454;
+    --main-section-bg: white;
+    --section-bg: rgb(238, 238, 238) ;
+    --shadow: rgba(0, 0, 0, .1);
+    --black-white: white;
+    --dark-gray: rgb(33, 37, 41);
+}
+
+:root:has(#mood:checked){
+    --main-color: rgb(193, 126, 31);
+    --secondary-site-color: #171717;
+    --main-typing-color: white;
+    --gray: gray;
+    --selector-color: #926321;
+    --section-bg: #252525 ;
+    --main-section-bg: #202020;
+    --shadow: rgba(0, 0, 0, .7);
+    --black-white: black;
+    --dark-gray: #FFFFFF;
+    
+}
+/* dark mood */
+
+nav .dark-mode-icon .light , nav .dark-mode-icon .dark{
+    cursor: pointer;
+} 
+nav .dark-mode-icon .light{
+    display: none;
+}
+:root:has(#mood:checked) nav .dark-mode-icon .light{
+    display: block;
+}
+:root:has(#mood:checked) nav .dark-mode-icon .dark{
+    display: none;
+}
+
+
 ::selection {
-    background-color: #D85454;
+    background-color: var(--selector-color);
     color: white;
 }
 
@@ -17,6 +59,7 @@ html {
 }
 
 body {
+    background-color: var(--main-section-bg);
     font-family: "Open Sans", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
 }
@@ -56,13 +99,13 @@ a {
 /* ------------------------------------------------------------------- */
 /* nav bar */
 nav {
-    background-color: white;
+    background-color: var(--secondary-site-color);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 5px 0 var(--shadow);
 }
 
 nav .container {
@@ -74,14 +117,14 @@ nav .container {
 }
 
 .logo h1 {
-    color: rgb(33, 37, 41);
+    color: var(--main-typing-color);
     font-weight: 700;
     font-size: 22px;
     margin: 0;
 }
 
 .logo span {
-    color: rgb(206, 18, 18);
+    color: var(--main-color);
 }
 
 .dark-mode-icon {
@@ -89,11 +132,11 @@ nav .container {
     font-weight: 900;
     line-height: 25px;
     font-size: 25px;
-    color: rgb(33, 37, 41);
+    color: var(--main-typing-color);
 }
 
 .container .menu {
-    color: lightgray;
+    color: var(--gray);
 }
 
 .container .menu ul {
@@ -111,14 +154,14 @@ nav .container {
 .container .menu a {
     text-decoration: none;
     font-weight: 600;
-    color: gray;
+    color: var(--gray);
     font-size: 14px;
     text-transform: capitalize;
     transition: .2s;
 }
 
 .container .menu a:hover {
-    color: black;
+    color: var(--main-typing-color);
 }
 
 .dark-mode-icon {
@@ -134,7 +177,7 @@ nav .container {
     content: '';
     width: 0;
     height: 2px;
-    background-color: rgb(206, 18, 18);
+    background-color: var(--main-color);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -153,7 +196,7 @@ nav .container {
 /* intro section */
 
 .intro {
-    background-color: rgb(238, 238, 238);
+    background-color: var(--section-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,7 +208,7 @@ nav .container {
 
 .intro .content {
     width: 100%;
-    color: rgb(79, 79, 90);
+    color: var(--main-typing-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,14 +219,16 @@ nav .container {
 .intro .content h2 {
     font-size: 65px;
     font-weight: 700;
-    color: rgb(55, 55, 63);
+    color: var(--main-typing-color);
     font-family: "Amatic SC", sans-serif;
     margin: 0;
 }
 
 .intro .content p {
+    margin: 0 !important;
     padding: 16px 0px;
     font-size: 16px;
+    color: var(--main-typing-color) !important;
 }
 
 .buttons-container {
@@ -194,19 +239,19 @@ nav .container {
 
 button {
     border: 0px;
-    color: white;
-    background-color: rgb(206, 18, 18);
+    color: var(--secondary-site-color);
+    background-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
     padding: 15px 20px;
-    transition: background-color .5s;
+    transition: .5s;
 
 }
 
 button:hover {
-    background-color: rgb(209, 48, 48);
+    background-color: var(--selector-color);
 }
 
 button i {
@@ -214,27 +259,11 @@ button i {
 }
 
 
-/* .watch-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 100%;
-}
-.video-icon{
-    padding: 20px;
-    background-color: white;
-    border-left: 10px solid rgb(206, 18, 18);
-    border-right: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid rgb(206, 18, 18);
-    border-radius: 100%; 
-}*/
 picture {
     width: 100%;
     padding: 0px 20px;
     margin: 20px 0px;
-    filter: drop-shadow(5px 5px 25px gray);
+    filter: drop-shadow(5px 5px 25px var(--shadow));
 }
 
 picture img {
@@ -307,7 +336,6 @@ picture:hover {
     flex-wrap: wrap;
     margin: 50px 0px;
     padding: 30px 15px;
-
 }
 
 .main-title {
@@ -316,11 +344,10 @@ picture:hover {
 
 .main-title h2 {
     margin: 10px;
-    color: rgb(127, 127, 144);
+    color: var(--main-typing-color);
     font-size: 14px;
     text-transform: uppercase;
     font-family: Inter, sans-serif;
-    color: rgb(127, 127, 144);
     font-weight: 400;
 }
 
@@ -328,12 +355,12 @@ picture:hover {
     margin: 10px;
     font-family: "Amatic SC", sans-serif;
     font-size: 50px;
-    color: rgb(33, 37, 41);
+    color: var(--main-typing-color);
     text-transform: capitalize;
 }
 
 .main-title span {
-    color: rgb(206, 18, 18);
+    color: var(--main-color);
 }
 
 .card {
@@ -345,10 +372,10 @@ picture:hover {
 
 .card-container {
     position: relative;
-    box-shadow: 0 2px 16px 0 rgba(128, 128, 128, .2);
+    box-shadow: 0 2px 16px 0 var(--shadow);
     transition: transform .5s;
     overflow: hidden;
-
+    background-color: var(--secondary-site-color);
 }
 
 
@@ -356,7 +383,7 @@ picture:hover {
     position: absolute;
     top: 10%;
     left: 100%;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: var(--section-bg);
     align-items: center;
     border-radius: 5px;
     transition: left .5s;
@@ -379,13 +406,13 @@ picture:hover {
 }
 
 .card-social a {
-    color: gray;
+    color: var(--main-typing-color);
     /* z-index: 2; */
 
 }
 
 .card-social a:hover {
-    color: black;
+    color: var(--black-white);
 }
 
 .card-container:hover {
@@ -399,14 +426,13 @@ picture:hover {
 
 .card-image::before {
     content: '';
-    background-image: url(images/team-shape.svg);
+    background-image: url(/images/team-shape.svg);
+    fill: var(--secondary-site-color);
     position: absolute;
     left: 0;
     width: 100%;
     bottom: -5px;
     min-height: 50px;
-
-
 }
 
 .card-image img {
@@ -426,7 +452,7 @@ picture:hover {
 .card-content h3 {
     font-size: 19px;
     font-weight: 700;
-    color: rgb(33, 37, 41);
+    color: var(--dark-gray);
     font-family: Inter, sans-serif;
 }
 
@@ -434,7 +460,7 @@ picture:hover {
 p {
     font-size: 13px;
     color:
-        rgb(127, 127, 144);
+        var(--gray);
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -447,7 +473,7 @@ p {
 /* gallery */
 
 .gallery {
-    background-color: #EEEEEE;
+    background-color: var(--section-bg);
     padding: 40px 15px;
     margin: 50px 0px;
 }
@@ -523,8 +549,9 @@ p {
 .contact-container {
     display: flex;
     align-items: center;
-    background-color: #F5F5F5;
+    background-color: var(--secondary-site-color);
     padding: 20px;
+    box-shadow: 0 2px 7px 0 var(--shadow);
 }
 
 .contact-icon {
@@ -534,7 +561,7 @@ p {
 }
 
 .contact-icon i {
-    background-color: #CE1212;
+    background-color: var(--main-color);
     border-radius: 100%;
     padding: 20px;
     color: white;
@@ -544,14 +571,14 @@ p {
 
 .details h3 {
     color:
-        rgb(125, 125, 125);
+        var(--gray);
     font-size: 20px;
     font-weight: 700;
     margin: 5px;
 }
 
 .details p {
-    color: rgb(33, 37, 41);
+    color: var(--dark-gray);
     font-size: 16px;
     font-weight: 400;
     margin: 0;
@@ -581,14 +608,14 @@ textarea {
     width: 100%;
     text-transform: capitalize;
     outline: none;
-    border: solid 2px #ccc;
+    border: solid 2px var(--section-bg);
     padding: 15px;
 }
 
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-    border: solid 2px #CE1212;
+    border: solid 2px var(--main-color);
 
 }
 
@@ -601,7 +628,7 @@ textarea {
 
 footer {
     background-color: #000000;
-    background-image: url(images/textured-metal-background.jpg);
+    background-image: url(/images/textured-metal-background.jpg);
     background-size: contain;
     padding: 40px 15px;
     position: relative;
@@ -667,7 +694,7 @@ footer .Social-media h3 {
     font-size: 20px;
     font-weight: 700;
     text-transform: capitalize;
-    border-bottom: gray 2px solid;
+    border-bottom: var(--gray) 2px solid;
     margin: 10px 0px;
 
 }
@@ -688,7 +715,7 @@ footer .Social-media ul a {
 }
 
 footer .Social-media ul a:hover {
-    color: #CE1212;
+    color: var(--main-color);
 }
 
 .contact-details h3 {
@@ -702,7 +729,7 @@ footer .contact-details ul {
 }
 
 footer .contact-details ul i {
-    color: #CE1212;
+    color: var(--main-color);
     font-size: 25px;
     margin: 10px;
 }

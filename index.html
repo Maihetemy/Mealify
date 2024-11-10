@@ -4,21 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        
+        
+    <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    
+    <!-- title -->
     <title>Mealify</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
 </head>
 
 <body>
+
+    <!-- ------------------------------------navbr----------------------------------- -->
     <nav>
         <div class="container">
             <div class="logo">
@@ -33,10 +44,14 @@
                 </ul>
             </div>
             <div class="dark-mode-icon">
-                <i class="fa-solid fa-moon"></i>
+                <input type="checkbox" hidden id="mood">
+                <label for="mood" class="light"><i class="fa-solid fa-sun"></i></label>
+                <label for="mood" class="dark"><i class="fa-solid fa-moon"></i></label>
             </div>
         </div>
     </nav>
+
+    <!-- ------------------------------------intro----------------------------------- -->
     <div class="intro" id="home">
         <div class="content">
             <h2>Enjoy Your Healthy<br>Delicious Food</h2>
@@ -56,6 +71,8 @@
             <img src="images/hero-img.png" alt="main dish">
         </picture>
     </div>
+
+    <!-- ------------------------------------chefs----------------------------------- --> 
     <div class="chefs" id="chefs">
         <div class="main-title">
             <h2>chefs</h2>
@@ -140,6 +157,8 @@
             </div>
         </div>
     </div>
+
+    <!-- ------------------------------------gallery----------------------------------- -->
     <div class="gallery" id="gallery">
         <div class="main-title">
             <h2>gallery</h2>
@@ -197,6 +216,8 @@
             </div>
         </div>
     </div>
+
+    <!-- ------------------------------------contact----------------------------------- -->
     <div class="contact" id="contact">
         <div class="main-title">
             <h2>contact</h2>
@@ -268,6 +289,8 @@
             </form>
         </div>
     </div>
+
+    <!-- ------------------------------------footer----------------------------------- -->
     <footer>
         <div class="about">
             <div class="logo-section">
