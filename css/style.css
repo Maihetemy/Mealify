@@ -434,7 +434,7 @@ picture:hover {
 
 .card-image::before {
     content: '';
-    background-image: url(/images/team-shape.svg);
+    background-image: url(../images/team-shape.svg);
     fill: var(--secondary-site-color);
     position: absolute;
     left: 0;
@@ -445,7 +445,7 @@ picture:hover {
 
 /* #mood:checked */
 :root:has(#mood:checked) .card-image::before {
-    background-image: url(/images/team-shape-dark.svg);
+    background-image: url(../images/team-shape-dark.svg);
 }
 
 .card-image img {
