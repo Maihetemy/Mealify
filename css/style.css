@@ -18,6 +18,7 @@
     --shadow: rgba(0, 0, 0, .1);
     --black-white: white;
     --dark-gray: rgb(33, 37, 41);
+    font-size: 1rem;
 }
 
 :root:has(#mood:checked){
@@ -79,7 +80,7 @@ a {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 1rem;
 }
 
 /* Track */
@@ -91,8 +92,8 @@ a {
 ::-webkit-scrollbar-thumb {
     background: rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(0, 0, 0, 1) 25%, rgba(43, 43, 49, 1) 81%);
-    border-radius: 20px;
-    height: 50px;
+    border-radius: 1.25rem;
+    height: 3rem;
 
 }
 
@@ -105,21 +106,21 @@ nav {
     left: 0;
     right: 0;
     z-index: 9999;
-    box-shadow: 0 2px 5px 0 var(--shadow);
+    box-shadow: 0 .125rem .25rem 0 var(--shadow);
 }
 
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 1rem;
 
 }
 
 .logo h1 {
     color: var(--main-typing-color);
     font-weight: 700;
-    font-size: 22px;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -130,8 +131,8 @@ nav .container {
 .dark-mode-icon {
     display: none;
     font-weight: 900;
-    line-height: 25px;
-    font-size: 25px;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
     color: var(--main-typing-color);
 }
 
@@ -148,16 +149,18 @@ nav .container {
 }
 
 .container .menu li {
-    padding: 8px;
+    padding: .5rem;
 }
 
 .container .menu a {
     text-decoration: none;
     font-weight: 600;
     color: var(--gray);
-    font-size: 14px;
+    font-size: .75rem;
     text-transform: capitalize;
     transition: .2s;
+    padding: 0px .5rem;
+
 }
 
 .container .menu a:hover {
@@ -170,13 +173,13 @@ nav .container {
 
 .under-line {
     position: relative;
-    padding: 6px 0px;
+    padding: .5rem 0;
 }
 
 .under-line::before {
     content: '';
     width: 0;
-    height: 2px;
+    height: .125rem;
     background-color: var(--main-color);
     position: absolute;
     bottom: 0;
@@ -201,8 +204,8 @@ nav .container {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap-reverse;
-    padding: 50px 0px;
-    margin: 20px 0px;
+    padding: 3rem 0;
+    margin: 1.5rem 0;
 }
 
 
@@ -217,7 +220,7 @@ nav .container {
 }
 
 .intro .content h2 {
-    font-size: 65px;
+    font-size: 4rem;
     font-weight: 700;
     color: var(--main-typing-color);
     font-family: "Amatic SC", sans-serif;
@@ -226,8 +229,8 @@ nav .container {
 
 .intro .content p {
     margin: 0 !important;
-    padding: 16px 0px;
-    font-size: 16px;
+    padding: 1rem 0;
+    font-size: 1rem;
     color: var(--main-typing-color) !important;
 }
 
@@ -238,15 +241,16 @@ nav .container {
 }
 
 button {
-    border: 0px;
+    border: 0;
     color: var(--secondary-site-color);
     background-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
-    padding: 15px 20px;
+    border-radius: 3rem;
+    padding: 1rem 1.25rem;
     transition: .5s;
+    font-size: .75rem;
 
 }
 
@@ -255,15 +259,15 @@ button:hover {
 }
 
 button i {
-    margin-right: 8px;
+    margin-right: .5rem;
 }
 
 
 picture {
     width: 100%;
-    padding: 0px 20px;
-    margin: 20px 0px;
-    filter: drop-shadow(5px 5px 25px var(--shadow));
+    padding: 0 1.5rem;
+    margin: 1.5rem 0;
+    filter: drop-shadow(.25rem .25rem 1.5rem var(--shadow));
 }
 
 picture img {
@@ -334,8 +338,8 @@ picture:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 50px 0px;
-    padding: 30px 15px;
+    margin: 3rem 0;
+    padding: 1.75rem 1rem;
 }
 
 .main-title {
@@ -343,18 +347,18 @@ picture:hover {
 }
 
 .main-title h2 {
-    margin: 10px;
+    margin: .75rem;
     color: var(--main-typing-color);
-    font-size: 14px;
+    font-size: 1rem;
     text-transform: uppercase;
     font-family: Inter, sans-serif;
     font-weight: 400;
 }
 
 .main-title p {
-    margin: 10px;
+    margin: 1rem;
     font-family: "Amatic SC", sans-serif;
-    font-size: 50px;
+    font-size:3rem;
     color: var(--main-typing-color);
     text-transform: capitalize;
 }
@@ -366,13 +370,13 @@ picture:hover {
 .card {
     width: 100%;
     text-align: center;
-    margin: 30px 0px;
+    margin: 1.75rem 0;
 }
 
 
 .card-container {
     position: relative;
-    box-shadow: 0 2px 16px 0 var(--shadow);
+    box-shadow: 0 .125rem 1rem 0 var(--shadow);
     transition: transform .5s;
     overflow: hidden;
     background-color: var(--secondary-site-color);
@@ -385,7 +389,7 @@ picture:hover {
     left: 100%;
     background-color: var(--section-bg);
     align-items: center;
-    border-radius: 5px;
+    border-radius: .25rem;
     transition: left .5s;
     z-index: 10;
 }
@@ -396,18 +400,17 @@ picture:hover {
 
 .card-social ul {
     margin: 0;
-    padding: 7px 10px;
+    padding: .5rem .75rem;
 
 }
 
 .card-social li {
-    margin: 10px 5px;
+    margin: .5rem .25rem;
 
 }
 
 .card-social a {
     color: var(--main-typing-color);
-    /* z-index: 2; */
 
 }
 
@@ -431,8 +434,8 @@ picture:hover {
     position: absolute;
     left: 0;
     width: 100%;
-    bottom: -5px;
-    min-height: 50px;
+    bottom: -.25rem;
+    min-height: 3rem;
 }
 
 .card-image img {
@@ -442,15 +445,15 @@ picture:hover {
 
 .card-container,
 .card-image img {
-    border-radius: 10px;
+    border-radius: .5rem;
 }
 
 .card-content {
-    padding: 10px;
+    padding: .5rem;
 }
 
 .card-content h3 {
-    font-size: 19px;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--dark-gray);
     font-family: Inter, sans-serif;
@@ -458,14 +461,14 @@ picture:hover {
 
 .card-content span,
 p {
-    font-size: 13px;
+    font-size: 1rem;
     color:
         var(--gray);
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .card-content p {
-    font-size: 15px;
+    font-size: .9rem;
     font-style: italic;
 }
 
@@ -474,15 +477,18 @@ p {
 
 .gallery {
     background-color: var(--section-bg);
-    padding: 40px 15px;
-    margin: 50px 0px;
+    padding: 2.5rem 1rem;
+    margin: 3rem 0;
 }
 
 
+.gallery-container{
+    margin: 1rem 0;
 
+}
 .gallery-container .image {
-    border: white 4px solid;
-    margin-bottom: 15px;
+    border: white .25rem solid;
+    margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
 }
@@ -494,12 +500,12 @@ p {
     text-align: center;
     flex-direction: column;
     gap: 0;
-    padding: 20px;
+    padding: 1.5rem;
 }
 
 .gallery-container .black-layer h3 {
     display: inline-block;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
 
 
@@ -531,27 +537,27 @@ p {
 /* ---------------------------------------------------------------------- */
 /* contact us */
 .contact {
-    margin: 50px 0px;
-    padding: 40px 15px;
+    margin: 3rem 0;
+    padding: 2.5rem 1rem;
 }
 
 .contact-items {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0px;
+    margin: 1.5rem 0;
 }
 
 .layer {
     width: 100%;
-    padding: 10px 0px;
+    padding: .75rem 0;
 }
 
 .contact-container {
     display: flex;
     align-items: center;
     background-color: var(--secondary-site-color);
-    padding: 20px;
-    box-shadow: 0 2px 7px 0 var(--shadow);
+    padding: 1.5rem;
+    box-shadow: 0 .125rem .5rem 0 var(--shadow);
 }
 
 .contact-icon {
@@ -563,26 +569,26 @@ p {
 .contact-icon i {
     background-color: var(--main-color);
     border-radius: 100%;
-    padding: 20px;
+    padding: 1rem;
     color: white;
-    margin-right: 10px;
+    margin-right: .5rem;
 }
 
 
 .details h3 {
     color:
         var(--gray);
-    font-size: 20px;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin: 5px;
+    margin: .25rem;
 }
 
 .details p {
     color: var(--dark-gray);
-    font-size: 16px;
+    font-size: .85rem;
     font-weight: 400;
     margin: 0;
-    margin: 5px;
+    margin: .25rem;
 
 }
 
@@ -595,9 +601,9 @@ form {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+    gap: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 .125rem 1rem 0 rgba(0, 0, 0, .1);
 
 }
 
@@ -608,14 +614,14 @@ textarea {
     width: 100%;
     text-transform: capitalize;
     outline: none;
-    border: solid 2px var(--section-bg);
-    padding: 15px;
+    border: solid .125rem var(--section-bg);
+    padding: 1rem;
 }
 
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-    border: solid 2px var(--main-color);
+    border: solid .125rem var(--main-color);
 
 }
 
@@ -630,7 +636,7 @@ footer {
     background-color: #000000;
     background-image: url(/images/textured-metal-background.jpg);
     background-size: contain;
-    padding: 40px 15px;
+    padding: 2.5rem 1rem;
     position: relative;
     z-index: 1;
 }
@@ -665,9 +671,9 @@ footer .logo-section {
 }
 
 footer .logo-section img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 3rem;
+    height: 3rem;
+    margin-right: .75rem;
 }
 
 footer .logo-section .logo h1 {
@@ -676,7 +682,7 @@ footer .logo-section .logo h1 {
 
 footer p {
     color: white;
-    font-size: 16px;
+    font-size: .75rem;
     font-weight: 400;
 }
 
@@ -686,16 +692,18 @@ footer .Social-media {
     align-items: center;
     flex-direction: column;
 }
-
+footer .social-media-icons{
+    padding: 0;
+}
 footer .Social-media h3 {
     width: 100%;
     text-align: center;
-    padding: 10px;
-    font-size: 20px;
+    padding: .75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-transform: capitalize;
     border-bottom: var(--gray) 2px solid;
-    margin: 10px 0px;
+    margin: .75rem 0;
 
 }
 
@@ -709,8 +717,8 @@ footer .Social-media ul {
 
 footer .Social-media ul a {
     color: white;
-    line-height: 24px;
-    font-size: 24px;
+    line-height: 1.5rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -730,8 +738,8 @@ footer .contact-details ul {
 
 footer .contact-details ul i {
     color: var(--main-color);
-    font-size: 25px;
-    margin: 10px;
+    font-size: 1.5rem;
+    margin: .75rem;
 }
 
 .subscription h3 {
@@ -739,7 +747,7 @@ footer .contact-details ul i {
 }
 
 .subscription p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -751,7 +759,7 @@ footer .contact-details ul i {
 .subscription button {
     width: 100%;
     border-radius: 0;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 400;
 
 }
@@ -771,18 +779,18 @@ footer .quick-links {
 
 .quick-links li {
     width: 50%;
-    padding: 5px;
+    padding: .25rem;
     transition: translate .5s;
 }
 
 .quick-links li:hover {
     background-color: rgba(128, 128, 128, .5);
-    translate: 10px;
+    translate: .75rem;
 }
 
 .quick-links li::before {
     content: "\f105";
     font: var(--fa-font-solid);
-    margin-right: 5px;
+    margin-right: .25rem;
 
 }
