@@ -112,13 +112,14 @@ nav {
     right: 0;
     z-index: 9999;
     box-shadow: 0 .125rem .25rem 0 var(--shadow);
+    padding: 0rem 1rem;
 }
 
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
 
 }
 
@@ -187,8 +188,9 @@ nav .container {
     height: .125rem;
     background-color: var(--main-color);
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
+    /* margin: .5rem; */
     transition: width .5s;
 }
 
@@ -209,7 +211,7 @@ nav .container {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap-reverse;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     margin: 1.5rem 0;
 }
 
@@ -242,7 +244,7 @@ nav .container {
 .buttons-container {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 button {
@@ -253,9 +255,12 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 3rem;
-    padding: 1rem 1.25rem;
     transition: .5s;
     font-size: .75rem;
+    
+}
+.custom-padding{
+    padding: 1.25rem 1.25rem;
 
 }
 
@@ -263,8 +268,51 @@ button:hover {
     background-color: var(--selector-color);
 }
 
-button i {
+.intro .book-button{
+    padding:  1rem;
+
+}
+#watch-button {
+    background: transparent;
+    color: var(--dark-gray);
+}
+
+#watch-button .video-icon {
     margin-right: .5rem;
+    background-color: var(--main-color);
+    padding: .40rem;
+    border-radius: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+#watch-button .video-icon:after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: var(--section-bg);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#watch-button .video-icon i {
+    background-color: var(--secondary-site-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .75rem;
+    padding: .5rem .6rem;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+#watch-button span {
+    font-weight: 600;
+}
+#watch-button:hover{
+    color: var(--main-color);
 }
 
 
@@ -400,12 +448,12 @@ picture:hover {
 }
 
 .card-container:hover .card-social {
-    left: 85%;
+    left: 83%;
 }
 
 .card-social ul {
     margin: 0;
-    padding: .5rem .75rem;
+    padding: .5rem;
 
 }
 
@@ -774,9 +822,14 @@ footer .contact-details ul i {
     width: 100%;
     border-radius: 0;
     font-size: .75rem;
-    
+
 }
-#footer-input{
+.subscription button i{
+    margin-right: .5rem;
+
+}
+
+#footer-input {
     width: 100%;
     padding: .75rem;
     margin-bottom: .5rem;
@@ -795,7 +848,9 @@ footer .quick-links {
     margin: 0;
     padding: 0;
 }
-
+footer .quick-subscription button{
+    font-size: 1rem;
+}
 .quick-links li {
     width: 50%;
     padding: .25rem;

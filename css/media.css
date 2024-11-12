@@ -9,6 +9,12 @@
     }
 
     /* -------------------------------------------------------- */
+    /* nav */
+
+    nav {
+        padding: 0 2.5rem;    }
+
+    /* -------------------------------------------------------- */
     /* intro */
 
     .intro {
@@ -120,7 +126,7 @@
 
     /* nav */
     nav {
-        padding: 0 4rem;
+        padding: 0 6rem;
     }
 
     /* intro */
@@ -145,7 +151,7 @@
     }
 
     .intro .content .book-button {
-        border-radius: 0 2.5rem 2.5rem 2.5rem 2.5rem;
+        border-radius: 0 2.5rem 2.5rem 2.5rem;
     }
 
     /* -------------------------------------------------------- */
@@ -179,17 +185,21 @@
         margin: 2.5rem 5.5rem;
         padding: 2rem .25rem;
     }
-    .contact form{
+
+    .contact form {
         justify-content: space-between;
     }
+
     #name-input,
     #email-input {
         width: 49%;
     }
-    #name-input{
+
+    #name-input {
         margin-right: .25rem;
     }
-    #email-input{
+
+    #email-input {
         margin-left: .25rem;
     }
 
@@ -217,7 +227,9 @@
     .contact-details {
         width: 25%;
     }
-
+    footer .quick-subscription button{
+        font-size: .75rem;
+    }
     .about {
         order: 1;
     }
