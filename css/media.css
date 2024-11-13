@@ -12,7 +12,8 @@
     /* nav */
 
     nav {
-        padding: 0 2.5rem;    }
+        padding: 1 2.5rem;
+    }
 
     /* -------------------------------------------------------- */
     /* intro */
@@ -126,7 +127,8 @@
 
     /* nav */
     nav {
-        padding: 0 6rem;
+        padding: .75rem 6rem;
+        justify-content: space-between;
     }
 
     /* intro */
@@ -227,9 +229,11 @@
     .contact-details {
         width: 25%;
     }
-    footer .quick-subscription button{
+
+    footer .quick-subscription button {
         font-size: .75rem;
     }
+
     .about {
         order: 1;
     }

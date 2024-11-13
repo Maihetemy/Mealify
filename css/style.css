@@ -113,15 +113,12 @@ nav {
     z-index: 9999;
     box-shadow: 0 .125rem .25rem 0 var(--shadow);
     padding: 0rem 1rem;
-}
-
-nav .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: .5rem;
-
+    padding: .75rem .5rem;
 }
+
 
 .logo h1 {
     color: var(--main-typing-color);
@@ -142,11 +139,12 @@ nav .container {
     color: var(--main-typing-color);
 }
 
-.container .menu {
+.menu {
     color: var(--gray);
+    padding: 0 1rem;
 }
 
-.container .menu ul {
+.menu ul {
     padding: 0;
     margin: 0;
     display: flex;
@@ -154,22 +152,21 @@ nav .container {
     justify-content: space-around;
 }
 
-.container .menu li {
+.menu li {
     padding: .5rem;
 }
 
-.container .menu a {
+.menu a {
     text-decoration: none;
     font-weight: 600;
     color: var(--gray);
     font-size: .75rem;
     text-transform: capitalize;
     transition: .2s;
-    padding: 0px .5rem;
 
 }
 
-.container .menu a:hover {
+.menu a:hover {
     color: var(--main-typing-color);
 }
 
@@ -198,7 +195,7 @@ nav .container {
     width: 100%;
 }
 
-.container .dark-mode-icon {
+.dark-mode-icon {
     visibility: visible;
 }
 
