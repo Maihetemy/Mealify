@@ -85,7 +85,7 @@ a {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: .75rem;
 }
 
 /* Track */
@@ -440,7 +440,7 @@ picture:hover {
     background-color: var(--section-bg);
     align-items: center;
     border-radius: .25rem;
-    transition: left .5s;
+    transition: left .5s ease 0.5s;
     z-index: 10;
 }
 
@@ -579,6 +579,10 @@ p {
     position: absolute;
     top: 100%;
     transition: top .5s;
+    z-index: 1;
+}
+.gallery-container .image:hover img{
+    transform: scale(1.2);
 }
 
 .gallery-container .image:hover .black-layer {
@@ -588,6 +592,8 @@ p {
 .gallery-container img {
     width: 100%;
     display: block;
+    transition: all .75s;
+    z-index: 0;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -691,7 +697,7 @@ textarea {
 
 footer {
     background-color: #000000;
-    background-image: url(/images/textured-metal-background.jpg);
+    background-image: url(../images/textured-metal-background.jpg);
     background-size: contain;
     padding: 2.5rem 1rem;
     position: relative;
